@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.login-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background: linear-gradient(23deg, #123,#321);
+    height: 100dvh;
+    width: 100%;
+}
+
+.login-container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 40px;
+    box-shadow: 0 0 10px gray;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.login-container form input{
+
+    padding: 6px 13px;
+    margin-bottom: 7px;
+    width: 220px;
+    border: 2px solid grey;
+    outline: none;
+    border-radius: 4px;
+}
+
+.login-container form input:focus{
+
+    border: 2px solid black;
+
+}
+
+.login-container h2{
+    margin-bottom: 14px;
+}
+
+.login-container form button{
+    padding: 8px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.logout{
+        padding: 2px 20px;
+        cursor: pointer;
+        font-weight: bold;
+}
+
+form p{
+    font-size: 15px;
+    margin-top: 10px;
+    color: #123;
+}
+
+.data-container{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    height: 90px;
+    padding: 5%;
+    background-color: #123;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.tasks-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 0 10px #555;
+    width: 250px;
+    margin: 150px auto;
+    background-color: aliceblue;
+}
+
+.tasks-container h2{
+    margin-bottom: 20px;
+}
+
+.tasks-container div{
+    display: flex;
+    width: 100%;
+    gap: 0;
+    border: 1px solid #555;
+}
+
+.tasks-container input{
+    padding: 6px;
+    width: 70%;
+    border: none;
+    outline: none;
+
+}
+
+.tasks-container button{
+    width: 30%;
+    border: none;
+    cursor: pointer;
+}
+
+.options{
+    display: flex;
+    position: relative;
+    top: 100px;
+    margin: 10px;
+    gap: 20px;
+}
+
+.options button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+.tasks-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 130px;
+    gap: 15px;
+}
+
+.tasks-data p{
+    background-color: lightgrey;
+    padding: 5px;
+    border-radius: 2px;
+    width: 100px;
+}
+
+.tasks-div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.tasks-div input{
+    height: 20px;
+}
+
+.tasks-completed{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.tasks-completed p{
+    background-color: gray;
+    color: white;
+    text-decoration: line-through;
+}
+
+.Notasks{
+    background-color: #55555522;
+    padding: 30px 50px;
+    border-radius: 20px;
+}
