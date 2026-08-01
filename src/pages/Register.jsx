@@ -3,6 +3,7 @@ import './style.css'
 import toast from 'react-hot-toast'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Loader from '../../components/Loader'
 
 
 const Register = () =>{
@@ -53,7 +54,7 @@ const Register = () =>{
                 <input type="email" placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} />
                 <input type="password" placeholder="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                 <input type="password" placeholder="confirm" value={confirm} onChange={(e)=>setConfirm(e.target.value)}/>
-                <button type='submit'>Sign up</button>
+                <button type='submit' disabled={loading}>{loading? <Loader />:"Sign up"}</button>
                 <p>Already have acc? <Link to='/' >Sign in</Link> </p>
             </form>
         </div>

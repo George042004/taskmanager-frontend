@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { Link,useNavigate } from 'react-router-dom'
+import Loader from '../../components/Loader'
 
 
 const Login = () =>{
@@ -45,8 +46,8 @@ const Login = () =>{
                  <input type="email" placeholder='email' value={email} onChange={(e)=>setEmail(e.target.value)} />
                 <input type="password" placeholder="password" value={password} onChange={(e)=>setPassword(e.target.value)}/>
                
-                <button type='submit'>Sign in</button>
-                <p>No acc? <Link to='/register' >Sign up</Link> </p>
+                <button type='submit' disabled={loading}>{loading?<Loader />:"Sign in"}</button>
+                <p>No acc? <Link to='/register'>Sign up</Link> </p>
         
             </form>
         </div>

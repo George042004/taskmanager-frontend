@@ -4,6 +4,7 @@ import Data from './pages/Data'
 import {Toaster} from 'react-hot-toast'
 import {Routes,Route} from 'react-router-dom'
 import Protect from './pages/Protect'
+import Loader from '../components/Loader'
 
 
 function App() {
@@ -40,11 +41,11 @@ function App() {
 />
           
     <Routes>
-
       <Route path='/' Component={Login} />
       <Route path='/register' Component={Register} />
       <Route path='/data' element={<Protect children={<Data />} />} />
-
+      <Route path='*' Component={<h1>404 Not found</h1>} />
+      
     </Routes>
      
     </>
