@@ -4,6 +4,7 @@ import { useEffect } from "react"
 import toast from "react-hot-toast"
 import './style.css'
 import { useNavigate } from "react-router-dom"
+import Changepassword from "../../components/Changepassword"
 
 const Data = ()=>{
 
@@ -128,6 +129,7 @@ const Data = ()=>{
         <div className="options">
             <button onClick={()=>setOption('add')}>Add tasks</button>
             <button onClick={()=>setOption('view')}>View tasks</button>
+            <button onClick={()=>setOption('changepassword')}>Change password</button>
         </div>
             {
             data.map((details)=>{
@@ -187,6 +189,11 @@ const Data = ()=>{
                         }
                         </ul>
 
+            }
+
+            {
+                option === 'changepassword' &&
+                <Changepassword />
             }
         </>
     )
