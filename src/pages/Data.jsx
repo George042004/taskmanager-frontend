@@ -18,7 +18,7 @@ const Data = ()=>{
 
         const token = localStorage.getItem('token')
         setLoading(true)
-        const res = await axios.get('http://localhost:1111/users/getdata',{
+        const res = await axios.get('https://taskmanager-backend-5j73.onrender.com/users/getdata',{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -44,7 +44,7 @@ const Data = ()=>{
             return
         }
         const token = localStorage.getItem('token')
-        const res = await axios.post('http://localhost:1111/tasks/add',{task},{
+        const res = await axios.post('https://taskmanager-backend-5j73.onrender.com/tasks/add',{task},{
             headers:{
                 Authorization:`Bearer ${token}`
             }})
@@ -61,7 +61,7 @@ const Data = ()=>{
 
     async function gettasks(){
         const token = localStorage.getItem('token')
-        const res = await axios.get('http://localhost:1111/tasks/gettasks',{
+        const res = await axios.get('https://taskmanager-backend-5j73.onrender.com/tasks/gettasks',{
             
             headers:{
                 Authorization:`Bearer ${token}`
@@ -83,7 +83,7 @@ const Data = ()=>{
             return
         }
 
-        const res = await axios.delete(`http://localhost:1111/tasks/deltask/${_id}`)
+        const res = await axios.delete(`https://taskmanager-backend-5j73.onrender.com/tasks/deltask/${_id}`)
         if(res.data.status)
         {
             toast.success(res.data.message)
@@ -96,7 +96,7 @@ const Data = ()=>{
 
     async function changetaskstatus(e,task,taskstatus) {
         e.preventDefault()
-        const res = await axios.put(`http://localhost:1111/tasks/taskstatus/${task}`,{
+        const res = await axios.put(`https://taskmanager-backend-5j73.onrender.com/tasks/taskstatus/${task}`,{
          taskstatus
         })
         
